@@ -180,6 +180,13 @@ Then let's go!
     - [4.4 Git terms you should know](#terms-git)
     - [4.5 Do things with Git](#project-git)
 - [Level 5: Next Steps](#next-steps)
+    - [5.1 Using Flask to build web applications](#flask)
+    - [5.2 Customizing your domain](#domains)
+    - [5.3 CSS Media Queries](#responsive)
+    - [5.4 Better JavaScript](#better-js)
+    - [5.5 Favicons](#favicons)
+    - [5.6 Google Analytics](#ga)
+    - [5.7 Bootstrap](#bootstrap)
 
 ------------------------------
 <a href="#top" class="top" id="html">Top</a>
@@ -237,10 +244,10 @@ the `http://` at the beginning of the link inside the
 However, <span class="major-key">when you link to a different page on
 the same website, you should always omit both the
 `http://` and the base URL</span>—so, for example, if I
-wanted to link to `learn.adicu.com/data-science`, the tag
+wanted to link to `learn.devfe.st/data-science`, the tag
 should look like this: `<a href="/data-science">`. This
 means that if you ever just want to link to the homepage (e.g.
-`learn.adicu.com`), the correct `href` is simply
+`learn.devfe.st`), the correct `href` is simply
 `href="/"`.
 
 Note that the `href` goes inside the tag itself! This
@@ -417,27 +424,27 @@ mini-topic: the directory structure for websites.
 This might be a little complicated, and it's hard to explain without
 looking at an example. So, let's use this website as an example! The
 **root directory** of this website is a folder called
-`learn.adicu.com/`, and it contains seven HTML files. Here are the
+`learn.devfe.st/`, and it contains seven HTML files. Here are the
 files and their respective URLs:
 
--   `index.html` : `learn.adicu.com/`
--   `index.html` : `learn.adicu.com/beginner-dev/index.html`
--   `index.html` : `learn.adicu.com/data-science/index.html`
--   `index.html` : `learn.adicu.com/game-dev/index.html`
--   `index.html` : `learn.adicu.com/ios/index.html`
--   `index.html` : `learn.adicu.com/product/index.html`
--   `index.html` : `learn.adicu.com/webdev/index.html`
+-   `index.html` : `learn.devfe.st/`
+-   `index.html` : `learn.devfe.st/beginner-dev/index.html`
+-   `index.html` : `learn.devfe.st/data-science/index.html`
+-   `index.html` : `learn.devfe.st/game-dev/index.html`
+-   `index.html` : `learn.devfe.st/ios/index.html`
+-   `index.html` : `learn.devfe.st/product/index.html`
+-   `index.html` : `learn.devfe.st/webdev/index.html`
 
 Isn't it weird that all of the HTML files are called `index.html`? <span class="major-key">When a folder
 contains a file named `index.html`, that is the default
 page that will be shown when you don't specify a file name.</span>
 
-We could have built it so that the iOS track was contained in a file called `ios.html`, and then you could view the page by navigating to `learn.adicu.com/ios.html`—but it's cleaner to organize everything so that you only have to navigate to `learn.adicu.com/ios/`, which will automatically display the file at `learn.adicu.com/ios/index.html`.
+We could have built it so that the iOS track was contained in a file called `ios.html`, and then you could view the page by navigating to `learn.devfe.st/ios.html`—but it's cleaner to organize everything so that you only have to navigate to `learn.devfe.st/ios/`, which will automatically display the file at `learn.devfe.st/ios/index.html`.
 
 The directory
 structure looks something like this:
 
-    learn.adicu.com/
+    learn.devfe.st/
       - index.html
       - beginner-dev/
         - index.html
@@ -1989,7 +1996,149 @@ we'll talk about it in the next section.
 <a href="#top" class="top" id="next-steps">Top</a>
 ## Level 5: Next Steps
 
+Now that we've learned the basic skills needed to get a website out in
+the real world, let's cover some ways to make it better. A lot better.
 
+In no particular order....
+
+<a id="flask"></a>
+### Using Flask to build web applications
+
+We've learned a lot of really useful skills over the past few lessons.
+However, in order to develop websites that provide services or generate
+content dynamically, knowledge of HTML, CSS, and JavaScript isn't quite
+enough!
+
+[Flask](http://flask.pocoo.org/) is a Python **framework** that makes it
+really easy to take the next step in your illustrious web development
+career. For a thorough look at Flask, I can't recommend ADI's own
+[guide](http://learn.devfe.st/webdev/) to developing with Flask highly
+enough. There's no better way to start making fully-fledged web apps!
+
+<a id="domains"></a>
+### Customizing your domain
+
+To customize your website's domain name, it's as easy as 1, 2, 3i, 3ii!
+
+1.  Go to [Namecheap](https://namecheap.com) and buy a domain you like!
+    Remember, the [GitHub student developer
+    pack](https://education.github.com/pack/) comes with a free
+    `.me` domain from Namecheap, in case you don't want to
+    spend any money.
+2.  In your `username.github.io` repo, at the same level
+    as `index.html`create a file called
+    `CNAME`. Inside that file, add just one line: your new
+    domain name, all lowercase, and nothing else. For example, if you buy `coolperson.me`, your
+    site's CNAME is just:
+
+        coolperson.me
+
+3.  In Namecheap, in your dashboard, click “Manage” on the domain name
+    you just bought. Then click on Advanced DNS from the tabs in the
+    middle of the page. Then, do the following:
+
+    1.  Use the red “Add new record” button to add two A Records, both
+        with host `@`, one with the IP address
+        `192.30.252.153`, the other with IP address
+        `192.30.252.154`.
+    2.  Use the red “Add new record” button to add a CNAME Record, with
+        host `www` and the value
+        `[username].github.io.`.
+        Don't
+        leave out the dot at the end of it!
+
+You'll need to wait at least half an hour for the changes to finish, but
+after that, everything should work like you want it to.
+
+<a id="responsive"></a>
+### CSS Media Queries
+
+While you were designing your website, did you ever think about what it
+would look like on a phone? More and more people browser the internet
+using their phones, and it's our duty as web developers to make sure our
+websites' user experience is just as good on a phone or tablet.
+
+The best way to do this is in your CSS, with **media queries**! That's
+how this website looks passable on mobile.
+
+-   [Here](http://learnlayout.com/media-queries.html)'s a
+    quick introduction.
+-   [Here](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)'s
+    a great reference guide.
+-   [Here](https://css-tricks.com/logic-in-media-queries/) are some
+    interesting tricks if you want to get your brain working hard.
+
+<a id="better-js"></a>
+### Better JavaScript
+
+Our JavaScript lesson was pretty long, but I still left out a lot of
+things that are really crucial for working on anything beyond a personal
+site.
+
+1.  I've linked to [Eloquent JavaScript](http://eloquentjavascript.net)
+    before, and I'll do it again. It's so important to have good
+    JavaScript fundamentals, and this website does by far the best job.
+    You should already have read chapters 1 and 2; maybe even more
+    important is [Chapter
+    3](http://eloquentjavascript.net/03_functions.html), functions.
+    Please read that!
+2.  MDN also has an excellent [crash
+    course](https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
+    in all things JavaScript. It's much shorter than EloquentJS, but
+    still covers a lot of the important stuff.
+
+<a id="favicons"></a>
+### Favicons
+
+Ever wonder how there's a little green J next to the
+`title` in your browser's tabs? It's called a **favicon**,
+and all the cool kids will have one on their personal sites.
+
+You can make one with [this silly tool](http://www.favicon.cc/), and
+store it at the same level as your `index.html` with the
+name `favicon.ico`.
+
+To use a `.png`, or to get more information about the
+rabbit hole that is the favicon, check out this [incredibly detailed
+guide](https://github.com/audreyr/favicon-cheat-sheet). Don't spend too
+much time there or your brain will explode.
+
+<a id="ga"></a>
+### Google Analytics
+
+Why make a personal site if you can't have incredibly detailed
+information about how many people are visiting your website every day,
+where they're from, and what browser they're using? [Google
+Analytics](https://google.com/analytics) is such a comically useful tool
+that every time I use it I'm amazed at how free it is.
+
+The guide on the Google Analytics site should be enough to get you
+started;
+[here](https://support.google.com/analytics/answer/1008015?hl=en) is an
+extra-detailed guide in case you get stuck.
+
+<a id="bootstrap"></a>
+### Bootstrap
+
+I love web design, but I recognize that not everyone shares my love for
+wrangling with CSS. If that sounds like you, you should check out
+[Bootstrap](https://getbootstrap.com): it's a **CSS framework**, which
+provides a lot of built-in styling that works well on all devices.
+
+-   [Here](https://www.codecademy.com/courses/web-beginner-en-yjvdd/0/1)
+    is a great way to get started with Bootstrap: a lesson from
+    Codecademy!
+-   [Here](https://getbootstrap.com/getting-started/)'s Bootstrap's own
+    “getting started” guide.
+-   [Here](https://www.youtube.com/watch?v=YXVoqJEwqoQ)'s a pretty
+    reasonable (if slightly out of date) video guide to getting started
+    with Bootstrap.
+
+-----------
+
+This concludes the beginner development curriculum! Wow, huh?
+
+Thanks so much for reading all of this stuff. I hope you learned a lot and had fun. If you have any feedback for us, please let us know—we'd love to hear from you!
 
 <script type="text/javascript">console.log("Hi! This is what happens when you console.log from inside a file.");</script>
 
