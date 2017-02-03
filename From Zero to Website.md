@@ -187,7 +187,6 @@ Then let's go!
     - [5.5 Favicons](#favicons)
     - [5.6 Google Analytics](#ga)
     - [5.7 Bootstrap](#bootstrap)
-	- [5.8 Designing a good webpage](#
 
 ------------------------------
 <a href="#top" class="top" id="html">Top</a>
