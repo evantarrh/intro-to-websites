@@ -187,6 +187,7 @@ Then let's go!
     - [5.5 Favicons](#favicons)
     - [5.6 Google Analytics](#ga)
     - [5.7 Bootstrap](#bootstrap)
+	- [5.8 Designing a good webpage](#
 
 ------------------------------
 <a href="#top" class="top" id="html">Top</a>
@@ -216,8 +217,8 @@ more HTML elements!
 #### Headers
 
 One of the best ways to create hierarchy is with **headers**. At the top
-of this page, the text "From Zero To Website" is actually an `h1`, so the code
-looks like `<h1>From Zero To Website</h1>`.
+of this page, the text "DevFest Beginner Development Track" is actually an `h1`, so the code
+looks like `<h1>DevFest Beginner Development Track</h1>`.
 
 `h1`'s are the biggest options for headers, but there are
 also `h2`'s and `h3`'s, all the way down to
