@@ -1119,7 +1119,7 @@ importing the CSS file in your `head`</span>, like so:
     <head>
         <title>Kylo Ren's Personal Blog</title>
         <link href='https://fonts.googleapis.com/css?family=Lato:400,700,900,400italic' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" type="text/css" href="/css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
 
 
@@ -1400,7 +1400,7 @@ right at the bottom of your `body`:
         <body>
             <!-- Content goes here -->
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-            <script src="/js/index.js"></script>
+            <script src="js/index.js"></script>
         </body>
     </html>
 
@@ -1453,7 +1453,7 @@ you link to your own code. Again, the snippet goes at the bottom of the
     <body>
         <!-- Content goes here -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        <script src="/js/index.js"></script>
+        <script src="js/index.js"></script>
     </body>
 
 OK! We're ready to do some wild things using jQuery and JavaScript.
